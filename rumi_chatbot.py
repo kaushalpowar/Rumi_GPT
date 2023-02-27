@@ -21,7 +21,7 @@ def get_rumi_quote(user_input):
 
 def main():
     import streamlit as st
-    st.image("/Users/kaushal/Documents/Projects/poems_like_rumi/Header_image.png")
+    st.image("Header_image.png")
 
     html_temp = """
                     <div style="background-color:{};padding:1px">
