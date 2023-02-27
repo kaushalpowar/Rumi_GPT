@@ -1,5 +1,6 @@
 # Rumi_GPT
-![Header_image](https://github.com/kaushalpowar/Rumi_GPT/blob/main/Header_image.png)
+![Header_image](https://user-images.githubusercontent.com/90775147/221669463-5a63d0ed-72d6-493b-b113-e6dec3a4dbc7.png)
+g)
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rumi-gpt-chatbot.streamlit.app/)
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=kaushalpowar/Rumi_GPT)
