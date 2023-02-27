@@ -31,4 +31,4 @@ Simply enter how you are feeling right now.
 
 
 ## How to support the project
-will be adding Buy me a coffee link soon
+[Support my work](https://www.buymeacoffee.com/kaushal.ai)
