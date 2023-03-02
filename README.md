@@ -4,6 +4,7 @@
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rumi-gpt-chatbot.streamlit.app/)
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=kaushalpowar/Rumi_GPT)
+![](https://badges.pufler.dev/visits/kaushalpowar/Rumi_GPT?color=black&logo=github&style=flat-square)
 ![starts badge](https://img.shields.io/github/stars/kaushalpowar/Rumi_GPT)
 
 <br/>
