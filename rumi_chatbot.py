@@ -6,7 +6,7 @@ openai.api_key = st.secrets["api_secret"]
 
 
 def get_rumi_quote(user_input):
-    prompt = f"Give me a Rumi quote for : {user_input} and explain that quote. \n"
+    prompt = f"{user_input} Give me a Rumi's quote for this and explain that quote. \n"
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
