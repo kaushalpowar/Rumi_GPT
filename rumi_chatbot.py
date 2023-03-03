@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.components.v1 import html
 import openai
 
 openai.api_key = st.secrets["api_secret"]
@@ -28,6 +29,8 @@ def main():
 
                     </div>
                     """
+    button = """
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="kaushal.ai" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Support my work" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>"""
     with st.sidebar:
         st.markdown("""
         # About 
@@ -40,10 +43,21 @@ def main():
         st.markdown(html_temp.format("rgba(55, 53, 47, 0.16)"), unsafe_allow_html=True)
         st.markdown("""
         Made by [@Obelisk_1531](https://twitter.com/Obelisk_1531)
-        """,
-                    unsafe_allow_html=True,
-                    )
-
+        """)
+        html(button, height=70, width=220)
+        st.markdown(
+            """
+            <style>
+                iframe[width="210"] {
+                    position: fixed;
+                    bottom: 60px;
+                    right: 40px;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+                   
     st.markdown("<h4 style='text-align: center;'>Let Rumi guide you with our chatbot🤖❤️ ️</h4>",
                 unsafe_allow_html=True)
 
