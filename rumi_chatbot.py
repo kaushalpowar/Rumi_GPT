@@ -1,24 +1,30 @@
 import streamlit as st
 from streamlit.components.v1 import html
 import openai
+from langchain.prompts import PromptTemplate, StringPromptTemplate
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import LLMChain
+from langchain.llms import OpenAI
+from langchain.chains import LLMChain, SequentialChain, SimpleSequentialChain
 
 openai.api_key = st.secrets["api_secret"]
 
+code_template = PromptTemplate(
+        input_variables=["user_input"],
+        template='You are a chatbot with personality of Rumi (persian poet). Following are the feelings of user, suggest a relevant Rumi quote with little explanation that will uplift them.{user_input}')
+
 
 def get_rumi_quote(user_input):
-    prompt = f"{user_input} Give me a Rumi's quote for this and explain that quote. \n"
-    response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=prompt,
-        temperature=0.5,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        timeout=30,
-    )
-    message = response.choices[0].text
-    return message
+    '''Generate node red code using LLM'''
+    # Create an OpenAI LLM model
+    open_ai_llm = OpenAI(temperature=0.7, max_tokens=1000)
+    # Create a chain that generates the code
+    code_chain = LLMChain(llm=open_ai_llm, prompt=code_template, verbose=True)
 
+    message = code_chain.run(user_input)
+
+    return message
+    
 
 def main():
     import streamlit as st
