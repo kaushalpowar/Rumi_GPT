@@ -1,14 +1,14 @@
 import streamlit as st
 from streamlit.components.v1 import html
 import openai
+import os
 from langchain.prompts import PromptTemplate, StringPromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SequentialChain, SimpleSequentialChain
 
-openai.api_key = st.secrets["api_secret"]
-os.environ["OPENAI_API_KEY"] = openai.api_key
+os.environ["OPENAI_API_KEY"] = st.secrets["api_secret"]
 
 code_template = PromptTemplate(
         input_variables=["user_input"],
