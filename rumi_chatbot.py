@@ -8,6 +8,7 @@ from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SequentialChain, SimpleSequentialChain
 
 openai.api_key = st.secrets["api_secret"]
+os.environ["OPENAI_API_KEY"] = openai.api_key
 
 code_template = PromptTemplate(
         input_variables=["user_input"],
